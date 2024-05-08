@@ -1,0 +1,1 @@
+export type ImageType = {url: string, id: null | string}
