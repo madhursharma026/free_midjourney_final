@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Mona Light";
+  src: url("../assets/fonts/MonaSans-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona";
+  src: url("../assets/fonts/MonaSans-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Medium";
+  src: url("../assets/fonts/MonaSans-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Bold";
+  src: url("../assets/fonts/MonaSans-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona_Extra_Bold";
+  src: url("../assets/fonts/MonaSans-ExtraBold.ttf");
+  font-display: swap;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .x-center {
+    @apply left-2/4 translate-x-[-50%];
+  }
+
+  .input-style {
+    @apply h-12 rounded-md w-full border-none outline-none bg-gray-100 border border-slate-700 font-Mona_Medium text-dark-2 pl-11 text-sm;
+  }
+
+  .pq-button-flat {
+    @apply uppercase font-Mona_Bold tracking-[2px] min-h-[55px] scale-100 active:scale-[0.98] transition relative p-3 text-sm cursor-pointer text-white bg-gradient-to-r from-[#6c88ef] to-[#7462ffed] flex items-center justify-center overflow-hidden no-underline min-w-52 rounded-lg hover:bg-gradient-to-r hover:from-[#6c88ef] hover:to-[#7462ffed] shadow-sm hover:text-white focus:text-white active:text-white
+  }
+
+  .heading {
+    @apply xl:text-5xl lg:text-4xl md:text-3xl leading-tight font-Mona_EB z-10 relative block capitalize;
+  }
+
+  .text {
+    @apply lg:text-base md:text-sm lg:leading-7 md:leading-6;
+  }
+
+  .gradient02 {
+    background: linear-gradient(0deg, #221A45 0%, #060522 100%);
+  }
+}
+
+.pq-breadcrumb:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  background: url("../assets/images/grad-2.png") center/100% 100% no-repeat;
+  width: 450px;
+  height: 300px;
+  opacity: 0.5;
+}
+
+.contact-form h3 span {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form h3 span:first-child {
+  background: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #fc4a1a, #f7b733);
+  background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+.contact-form h3 span:nth-child(2) {
+  background: #396afc;
+  background: -webkit-linear-gradient(to right, #396afc, #2948ff);
+  background: linear-gradient(to right, #396afc, #2948ff);
+}
+.contact-form h3 span:nth-child(3) {
+  background: #d31027;
+  background: -webkit-linear-gradient(to right, #d31027, #ea384d);
+  background: linear-gradient(to right, #d31027, #ea384d);
+}
+.contact-form h3 span:nth-child(4) {
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #606c88, #3f4c6b);
+  background: linear-gradient(to right, #606c88, #3f4c6b);
+}
+
+.gallery-wrapper {
+  .image {    
+    &:hover {
+      .content {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    
+    .content {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 22.86%, rgba(0, 0, 0, 0.10) 50.35%, rgba(0, 0, 0, 0.40) 79.66%);
+      visibility: hidden;
+      opacity: 0;
+    }
+  } 
+}
+
+.collection-popup {
+  backdrop-filter: blur(4px);
+
+  .modal-dialog {
+    max-width: 1100px;
+
+    .modal-body {
+      padding: 30px;
+    }
+  }
+}
+
+.overlay-blur {
+  position: fixed;
+  inset: 0;
+  background: #00000034;
+  z-index: 99;
+  backdrop-filter: blur(30px);
+  transition: 0.5s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
