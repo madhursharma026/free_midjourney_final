@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /gallery
+Disallow: /privacy-policy
+Disallow: /settings
+Disallow: /auth/*
+
+# Host
+Host: https://freemidjourneyai.com
+
+# Sitemaps
+Sitemap: https://freemidjourneyai.com/new-sitemap.xml
